@@ -3,9 +3,22 @@ import { Command } from 'lucide-react'
 
 export default function NavBar() {
 
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <header id='navbar' className='fixed top-3.5 left-1/2 -translate-x-1/2 z-1 transition-all duration-300 rounded-full bg-[#1b1b1b] border border-white/10 w-[90%] text-white/80 py-2'>
-        <div className='mx-auto h-full px-6'>
+    <header id='navbar' className={`fixed top-3.5 left-1/2 -translate-x-1/2 z-10 transition-all duration-500 ${isScrolled ? "h-16 bg-[#1b1b1b]/40 backdrop-blur-xl border border-white/10 scale-95 w-[90%] rounded-full" : "h-16 bg-[#1b1b1b]/40 backdrop-blur-xl border border-white/10 scale-95 w-[95%] rounded-3xl"}`}>
+        <div className='h-full px-6'>
           <nav className='centered-row justify-between h-full'>
           {/* Logo */}
           <div className='centered-row space-x-2 cursor-pointer'>
