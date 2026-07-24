@@ -1,7 +1,7 @@
 import React from 'react'
 import HeroSection from '../views/HeroSection'
 import LogoCarousle from '../views/LogoCarousle'
-
+import FeaturesSection from '../views/FeaturesSection'
 
 export default function HomePage() {
   return (
@@ -12,6 +12,9 @@ export default function HomePage() {
 
       {/* Logo Carousel Section */}
       <LogoCarousle />
+
+      {/* Feature Section */}
+      <FeaturesSection />
     </div>
   )
 }

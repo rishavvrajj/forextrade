@@ -32,7 +32,7 @@ export default function NavBar() {
           <div className='hidden md:centered-row space-x-5 lg:space-x-15'>
             {
               ['Features', 'Price', 'Testmonials'].map((item,index) => (
-                <a key={index} href="nav_link" className='text-sm text-zinc-300/90 hover:text-indigo-300 hover:-translate-y-1 ease-out transition-all duration-300'>
+                <a key={index} href="#" className='text-sm text-zinc-300/90 hover:text-indigo-300 hover:-translate-y-1 ease-out transition-all duration-300'>
                   {item}
                 </a>
               ))
