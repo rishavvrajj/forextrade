@@ -22,7 +22,7 @@ export default function HomePage() {
       <PricingSection />
 
       {/* Testinomial Section */}
-      {/* <TestimonialSection /> */}
+      <TestimonialSection />
     </div>
   )
 }

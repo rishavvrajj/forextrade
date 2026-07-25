@@ -13,7 +13,7 @@ export default function LogoCarousle() {
     const extentedLogos = [...logos, ...logos, ...logos]
 
     return (
-        <div className='w-full overflow-hidden cursor-pointer backdrop-blur-sm py-5'>
+        <div className='w-full flex relative overflow-hidden cursor-pointer backdrop-blur-sm my-5'>
             <motion.div
                 className='flex space-x-8 lg:space-x-16 1'
                 style={{
@@ -56,6 +56,13 @@ export default function LogoCarousle() {
                     />
                 ))}
             </motion.div>
-        </div>
+            <div className='absolute h-full w-[15%] flex -left-1'>
+                <div className='h-full w-[50%] bg-black' />
+                <div className='h-full w-[50%] bg-gradient-to-r from-black to-transparent -left-1' />
+            </div>
+            <div className='absolute h-full w-[15%] flex -right-1'>
+                <div className='h-full w-[50%] bg-gradient-to-l from-black to-transparent -right-1' />
+                <div className='h-full w-[50%] bg-black' />
+            </div>        </div>
     )
 }
