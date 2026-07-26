@@ -43,9 +43,8 @@ const Footer = () => {
                     {links.map((item, index) => (
                       <li key={index}>
                         <a
-                          href="#features"
-                          className="text-xs lg:text-sm text-zinc-400 hover:text-indigo-300  hover:ml-3 transition2"
-                        >
+                          href="#"
+                          className="inline-block text-xs lg:text-sm text-zinc-400 hover:text-indigo-300 hover:translate-x-1 transition-transform duration-200"                        >
                           {item}
                         </a>
                       </li>
