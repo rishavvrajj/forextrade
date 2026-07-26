@@ -7,7 +7,7 @@ export default function FeaturesSection() {
     const [activeIndex, SetActiveIndex] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
 
-    const intervalRef = useRef<number | undefined>(undefined);
+    const intervalRef = useRef<ReturnType<typeof setInterval> | undefined>(undefined);
 
     useEffect(() => {
         if (!isPaused) {

@@ -4,6 +4,8 @@ import LogoCarousle from '../views/LogoCarousle'
 import FeaturesSection from '../views/FeaturesSection'
 import PricingSection from '../views/PricingSection'
 import TestimonialSection from '../views/TestimonialSection'
+import CtaSection from '../views/CTASection'
+import Footer from '../components/Footer'
 
 export default function HomePage() {
   return (
@@ -25,7 +27,10 @@ export default function HomePage() {
       <TestimonialSection />
 
       {/* CTA Section */}
+      <CtaSection />
 
+      {/* Footer */}
+      <Footer />
     </div>
   )
 }

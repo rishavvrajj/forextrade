@@ -11,7 +11,7 @@ export default function PricingSection() {
             <p className='text-xs lg:text-lg w-[90%] lg:w-full text-zinc-300/80'><span>Select the perfect trading plan with advanced features and competitive fees.</span></p>
         </div>
         {/* Subscription Card */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+        <div className='flex flex-col lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {pricingData.map((tier) => (
             <PricingTier key={tier.name} {...tier} />
           ))}
