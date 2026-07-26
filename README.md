@@ -1,4 +1,4 @@
-# Forextrade
+# Forextrade Landing Page
 
 A modern forex trading landing page built with React and Vite, featuring smooth scroll effects, elegant motion, and a conversion-focused layout for trading platforms or fintech products.
 
