@@ -23,6 +23,9 @@ export default function HomePage() {
 
       {/* Testinomial Section */}
       <TestimonialSection />
+
+      {/* CTA Section */}
+
     </div>
   )
 }

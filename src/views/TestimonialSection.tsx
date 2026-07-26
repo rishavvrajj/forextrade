@@ -1,7 +1,23 @@
 import React from 'react'
 import { testimonials } from '../assets/data'
+import { useRef } from 'react'
 
 export default function TestimonialSection() {
+
+    const marqueeRef = useRef<HTMLDivElement | null>(null)
+
+    const handleMouseEnter = () => {
+        if (marqueeRef.current) {
+            marqueeRef.current.style.setProperty('--marquee-play-state', 'paused')
+        }
+    }
+
+    const handleMouseLeave = () => {
+        if (marqueeRef.current) {
+            marqueeRef.current.style.setProperty('--marquee-play-state', 'running')
+        }
+    }
+
   return (
     <section className='py-16 overflow-hidden'>
         <div className=''>
@@ -13,13 +29,26 @@ export default function TestimonialSection() {
             </div>
 
             {/* MARQUEE */}
-            <div className='relative flex flex-col antialiased'>
+            <div 
+                ref={marqueeRef}
+                className='relative flex flex-col antialiased'
+            >
                 {/* Container */}
-                <div className='animate-marquee relative flow py-4'>
+                <div 
+                    style={{
+                        animationPlayState: 'var(--marquee-play-state)'
+                    }}
+                    className='animate-marquee relative flow py-4'
+                >
                     <div className='min-w-full flex shrink-0 items-stretch gap-8'>
                         {
                             testimonials.map((testimonials, index) => (
-                                <div key={index} className='w-[400px] cursor-pointer shrink-0 bg-black/40 backdrop-blur-xl border-white/5 hover:border-white/10 transition-all duration-300 p-8 border-2 rounded-xl'>
+                                <div 
+                                    key={index} 
+                                    onMouseEnter={handleMouseEnter}
+                                    onMouseLeave={handleMouseLeave}
+                                    className='w-[400px] cursor-pointer shrink-0 bg-black/40 backdrop-blur-xl border-white/5 hover:border-white/10 transition-all duration-300 p-8 border-2 rounded-xl'
+                                >
                                     {/* Images & Name */}
                                     <div className='centered-row gap-4 mb-6'>
                                         {/* Images */}
